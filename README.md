@@ -1,32 +1,48 @@
 # docker-command-build-plugin
 
-[![Build Status](https://ci.jenkins.io/job/Plugins/job/docker-command-build-plugin-plugin/job/master/badge/icon)](https://ci.jenkins.io/job/Plugins/job/docker-command-build-plugin-plugin/job/master/)
-[![Contributors](https://img.shields.io/github/contributors/jenkinsci/docker-command-build-plugin-plugin.svg)](https://github.com/jenkinsci/docker-command-build-plugin-plugin/graphs/contributors)
-[![Jenkins Plugin](https://img.shields.io/jenkins/plugin/v/docker-command-build-plugin.svg)](https://plugins.jenkins.io/docker-command-build-plugin)
-[![GitHub release](https://img.shields.io/github/release/jenkinsci/docker-command-build-plugin-plugin.svg?label=changelog)](https://github.com/jenkinsci/docker-command-build-plugin-plugin/releases/latest)
-[![Jenkins Plugin Installs](https://img.shields.io/jenkins/plugin/i/docker-command-build-plugin.svg?color=blue)](https://plugins.jenkins.io/docker-command-build-plugin)
-
 ## Introduction
 
-TODO Describe what your plugin does here
+一个借助Docker Engine API在Jenkins构建步骤使用多个Docker Command的Jenkins插件
+
+支持参数化Docker URL构建，每个构建项目可以使用不同的Docker Engine
 
 ## Getting started
 
-TODO Tell users how to configure your plugin here, include screenshots, pipeline examples and 
-configuration-as-code examples.
+### 打包
+
+执行下面命令打包成hpi格式
+> mvn hpi:hpi
+
+### 安装
+
+进到Jenkins后台插件管理上传安装插件
+![install-plugin](images/install-plugin.png "install-plugin")
+
+### 配置Docker URL
+
+![docker-url-parameter](images/docker-url-parameter.png "docker-url-parameter")
+
+### Docker命令
+
+![current-command-list](images/current-command-list.png "current-command-list")
+
+- Create container
+![create-container](images/create-container.png "create-container")
+- Remove container
+![remove-container](images/remove-container.png "remove-container")
+- Start container
+![start-container](images/start-container.png "start-container")
+- Stop container
+![stop-container](images/stop-container.png "stop-container")
+
+
+## TODO
+
+Others Command
 
 ## Issues
 
-TODO Decide where you're going to host your issues, the default is Jenkins JIRA, but you can also enable GitHub issues,
-If you use GitHub issues there's no need for this section; else add the following line:
-
-Report issues and enhancements in the [Jenkins issue tracker](https://issues.jenkins-ci.org/).
-
 ## Contributing
-
-TODO review the default [CONTRIBUTING](https://github.com/jenkinsci/.github/blob/master/CONTRIBUTING.md) file and make sure it is appropriate for your plugin, if not then add your own one adapted from the base file
-
-Refer to our [contribution guidelines](https://github.com/jenkinsci/.github/blob/master/CONTRIBUTING.md)
 
 ## LICENSE
 
